@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+/*https://colorhunt.co/palette/04156211468fda1212eeeeee*/ 
+
+body {
+    font-family: 'Poppins',sans-serif;
+    background-color: #041562;
+}
+
+#select-pet, #select-attack, #view-map, #btn-arrows, .title_game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_game {
+    color: white;
+    font-size: 32px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.subtitle_game {
+    color: white;
+    font-size: 20px;
+}
+
+.cards_pets, .cards_attacks {
+    display: flex;
+    gap: 10px;
+}
+
+#info-player {
+  display: flex;
+  justify-content: center;
+}
+
+#info-player p {
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+#info-player img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card_pet {
+    width: 180px;
+    height: 100px;
+    background: #11468F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card_pet img {
+  width: 80px;
+}
+
+.btn-normal {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: #035397;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5px;
+}
+
+button:hover, label:hover {
+  background: #e4cd37c7;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background-color: #5D8BF4;
+}
+
+.btn_attack {
+  background-color: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: auto;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#btn-others {
+  display: flex;
+}
+
+#btn-others div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn-others #enemy-id {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: white;
+  margin-top: 30px;
+}
+
+#print-msg {
+  width: 280px;
+  background: #EEEEEE;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#btn-reset {
+    border: none;
+    color: #11468F;
+    font-family: 'Poppins', sans-serif;
+}
+
+.print_attacks {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    color: white;
+}
+
+.lifes {
+    font-size: 32px;
+    margin-bottom: 0;
+    margin-top: 16.8px;
+}
+.attacks p {
+  height: 24px;
+}
+
+.titles {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.attacks, #attacks-ally, #attacks-enemy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn-arrows button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+#btn-arrows button:hover {
+  background: #e4cd37c7;
+}
+
+#btn-arrows button:focus {
+  background: #e4cd37c7;
+}
+
+.print_attacks img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.print_attacks hr {
+  width: 100%;
+  margin: 27px;
+}
+
+.chartlist {
+  padding: 0;
+  width: 80%;
+  margin-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.chartlist li { 
+  position: relative;
+  display: block; 
+  height: 100%;
+}
+
+.chartlist li .lifes {
+  border: 2px;
+  border-color: rgb(108, 108, 108);
+  border-style: solid;
+}
+
+.chartlist .lifes { 
+  display: block; 
+  /*position: absolute; */
+  top: 0; 
+  right: 0; 
+  margin: 0; 
+  text-align: right; 
+  color: rgba(153, 153, 153, 0); 
+  font-weight: bold; 
+  font-size: 0.875em; 
+}
+
+.chartlist .index { 
+  width: 100%;
+  display: block; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  background: #00ff00; 
+  text-indent: -9999px; 
+  overflow: hidden; 
+}
+
+@media (max-width: 750px) {
+  .cards_pets, .cards_attacks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  #btn-others {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 300px) {
+  #view-map div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

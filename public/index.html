@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BATTLE MOKEPON! </title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 class="title_game">Battle Mokepon</h1>
+        <h1 class="title_game">🌱💧🔥🧿</h1>
+        
+        <section id="select-pet">
+            <h2 class="subtitle_game">Select your pet:</h2>
+
+            <div id='cards-pets' class="cards_pets"></div>
+
+            <button id="btn-select-pet" class="btn-normal">Select</button>
+        </section>
+
+        <section id="view-map">
+            <section id="info-player">
+                <p id="pet-selected" class="subtitle_game">Pet</p>
+                <img id="face-selected" src="">
+            </section>
+            <section id="btn-others">
+                <button id="btn-random-enemy" class="btn-normal">Random Enemy</button>
+                <button id="btn-online" class="btn-normal"><span id="span-online">Connect</span> Online</button>
+                <div>
+                    <button id="btn-battle" class="btn-normal">Battle [<span id="span-battle">Pet</span>]</button>
+                    <span id="enemy-id">Enemy</span>
+                </div>
+            </section>
+            <h2 class="subtitle_game">Move your pet on the map</h2> 
+            <canvas id="canvas-map"></canvas>
+            <section id="btn-arrows">
+                <button
+                    ontouchend="stopMove()"  
+                    onmouseup="stopMove()" 
+                    onmousedown="onPressKey({key:'ArrowUp'})"
+                    ontouchstart="onPressKey({key:'ArrowUp'})" 
+                >⬆</button>
+                <div>
+                    <button 
+                        onmouseup="stopMove()"
+                        ontouchend="stopMove()" 
+                        onmousedown="onPressKey({key:'ArrowLeft'})"
+                        ontouchstart="onPressKey({key:'ArrowLeft'})"
+                    >⬅</button>
+                    <button 
+                        onmouseup="stopMove()"
+                        ontouchend="stopMove()" 
+                        onmousedown="onPressKey({key:'ArrowDown'})"
+                        ontouchstart="onPressKey({key:'ArrowDown'})"
+                    >⬇</button>
+                    <button 
+                        onmouseup="stopMove()"
+                        ontouchend="stopMove()" 
+                        onmousedown="onPressKey({key:'ArrowRight'})"
+                        ontouchstart="onPressKey({key:'ArrowRight'})"
+                    >➡</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="select-attack">
+            <h2 class="subtitle_game">Select your attack:</h2>
+            
+            <div id='cards-attacks' class="cards_attacks"></div>
+
+            <div id="print-msg">
+                <p id="print-result">Good Luck</p>
+
+                <section id="reset-game">
+                    <button id="btn-reset">Reset</button>
+                </section>
+            </div>
+
+            <div class="print_attacks">
+                <div class="attacks">
+                    <p class="titles">Ally</p>
+                    <img id="face-ally" src="">
+                    <ul class="chartlist">
+                        <li>
+                            <span id="lifes-ally" class="lifes">0</span>
+                            <span id="lifes-ally-bar" class="index" style="width: 42%">(42%)</span>
+                        </li>
+                    </ul>
+                    <p id="pet-ally" class="titles">Pet Ally</p>
+                    <div id="attacks-ally" class="attacks"></div>
+                </div>
+                <div class="attacks">
+                    <p class="titles">Battle</p>
+                    <img id="face-result" src="./assets/mokepn_vs.png">
+                    <p id="lifes-result" class="lifes">-</p>
+                    <p class="titles">Result</p>
+                    <div id="result-battles" class="attacks"></div>
+                </div>
+                <div class="attacks">
+                    <p class="titles">Enemy</p>
+                    <img id="face-enemy" src="">
+                    <ul class="chartlist">
+                        <li>
+                            <span id="lifes-enemy" class="lifes">0</span>
+                            <span id="lifes-enemy-bar" class="index" style="width: 42%">(42%)</span>
+                        </li>
+                    </ul>
+                    <p id="pet-enemy" class="titles">Pet Enemy</p>
+                    <div id="attacks-enemy" class="attacks"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>
